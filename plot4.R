@@ -15,7 +15,7 @@ download.file(fileUrl,fileDest , method = "curl")
 #unzip temp.zip to the /data directory
 unzip(fileDest, exdir = "./Data")
 file.remove("./data/temp.zip")
-
+ 
 #load only required data
 power_condf <- read.csv.sql("./data/household_power_consumption.txt", sep = ";",
                             header = TRUE,

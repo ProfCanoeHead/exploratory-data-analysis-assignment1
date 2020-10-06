@@ -1,6 +1,6 @@
 #R libraries used
 library(data.table)
-library(sqldf)
+library(sqldf) 
 
 #check if /data exists, if not create
 if (!file.exists("./data")){

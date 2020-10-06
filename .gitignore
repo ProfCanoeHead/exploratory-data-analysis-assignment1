@@ -1,0 +1,11 @@
+.Rproj.user
+.Rhistory
+.RData
+.Ruserdata
+data/*.txt
+
+*.txt
+
+*.zip
+
+*.zip

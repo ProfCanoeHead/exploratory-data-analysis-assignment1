@@ -5,7 +5,7 @@ library(sqldf)
 #check if /data exists, if not create
 if (!file.exists("./data")){
   dir.create("./data")
-
+}
 #GETTING DATA
 #download data from url, and save to temp.zip
 fileUrl <- "https://d396qusza40orc.cloudfront.net/exdata%2Fdata%2Fhousehold_power_consumption.zip"
@@ -22,7 +22,7 @@ power_condf <- read.csv.sql("./data/household_power_consumption.txt", sep = ";",
                             sql = "select * from file where `Date` IN ('1/2/2007', '2/2/2007')")
 
 timeseries <- strptime(paste(power_condf$Date, power_condf$Time, sep = " "), "%d/%m/%Y %H:%M:%S")
-}
+
 #plot4
 png("plot4.png", width=480, height=480)
 par(mfrow = c(2,2))
